@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Base de datos</title>
+  <link rel="stylesheet" href="api/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="api/css/styles.css" />
+  <link type="image/x-icon" href="api/img/favicon.ico" rel="icon" />
+  <link href="api/css/signin.css" rel="stylesheet">
+  <script src="api/js/jquery.min.js"></script>
+  <script src="api/js/bootstrap.min.js"></script>
+  <style>body {margin-top: 75px;}</style>
+</head>
+<body>
+<font size=4>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.cfe.gob.mx/paginas/home.aspx"><img class="img-responsive" src="api/img/logohome1.png" alt="logo" height="120" width="100"></a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Inicio</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contacto<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="mailto:nombre@dominio.com?subject=Plataforma_CFE"><i>nombre@dominio.com</i></a></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <center><h1>Base de Datos</h1>      
+    <p>Iniciar sesión o entrar como invitado.</p></center>
+    <div class="container">
+      <form class="form-signin" name="datos" action="Usuarios/Validar_Usuario.php" method="post"><br>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="text" name="usuario" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+        <label for="inputPassword" class="sr-only">Constraseña</label>
+        <input type="password" name="contraseña" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button><br>
+      </form>
+
+      <form class="form-signin" name="datos2" action="Usuarios/Validar_Invitado.php" method="post">
+      <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">Invitado</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Entrar como invitado</h4>
+              </div>
+              <div class="modal-body">
+                <p><center>Nombre: <input type="text" name="nombre" required autofocus></center></p>
+                <p><center>Apellido: <input type="text" name="apellido" required autofocus></center></p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-lg btn-info" type="submit">Ingresar</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+    </div>
+  </div>     
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-footer"><marquee>.: Comisión Federal de Electricidad :. </marquee></div>
+</div>
+
+</font>
+</body>
+</html>
